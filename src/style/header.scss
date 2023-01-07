@@ -45,6 +45,7 @@ header{
             background: $green-500;
             border-radius: 5px;
             padding: 7px 10px;
+            cursor: pointer;
 
             i{
                 margin-right: 10px;
@@ -71,7 +72,12 @@ header{
             height: 35px;
             margin-right: 20px;
             border-radius: 50%;
-            border: solid 3px $green-100;
+            border: solid 3px $green-ogree;
+            cursor: pointer;
+
+            &:hover{
+                border-color: $green-100;
+            }
 
             .count-alert{
                 display: flex;
@@ -89,6 +95,41 @@ header{
                 width: 17px;
                 height: 17px;
             }
+
+            .alert-list{
+                position: absolute;
+                top: 58px;
+                width: auto;
+                background: $green-500;
+                box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 10px;
+
+                li{
+                    width: 100%;
+                    height: 30px;
+                    padding: 5px 10px;
+                    border-bottom: solid 1px $green-100;
+
+                    a{
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: $active-gray;
+                    }
+
+                    &:hover{
+                        background: $green-100;
+                    }
+
+                    &:first-child{
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    &:last-child{
+                        border-radius: 0 0 10px 10px;
+                        border: none;
+                    }
+                }
+            }
         }
 
         .login-info{
@@ -99,6 +140,7 @@ header{
             h4{
                 font-size: 0.8rem;
                 font-weight: 500;
+                margin-right: 10px;
             }
 
             .leave{
@@ -110,6 +152,72 @@ header{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
+                .img-admin{
+                    width: 50px;
+                    height: 50px;
+                    border: solid 2px $green-ogree;
+                    border-radius: 50%;
+                    padding: 3px;
+                    font-size: 0;
+                    cursor: pointer;
+
+                    img{
+                        width: 100%;
+                        border-radius: 50%;
+                        object-fit: contain;
+                    }
+
+                    i{
+                        margin-left: 38px;
+                        margin-top: -5px;
+                        font-size: 0.6rem;
+                    }
+
+                    &:hover{
+                        border-color: $green-100;
+                    }
+
+                    .submenu-profile{
+                        display: none;
+                        flex-direction: column;
+                        width: 70px;
+                        background: $green-500;
+                        margin-top: 5px;
+                        border-radius: 10px;
+                        position: absolute;
+                        right: 10px;
+                        opacity: 0;
+                        box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.5);
+
+                        li{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 30px;
+                            padding: 0 10px;
+
+                            a{
+                                font-size: 0.8rem;
+                                font-weight: bold;
+                                color: $active-gray;
+                            }
+
+                            &:hover{
+                                background: $green-100;
+                            }
+
+                            &:first-child{
+                                border-radius: 10px 10px 0 0;
+                            }
+
+                            &:last-child{
+                                border-radius: 0 0 10px 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
