@@ -3,18 +3,15 @@ import '../style/styles.scss'
 /* Main Menu */
 
 const menuAlunos = document.querySelector('.alunos');
-menuAlunos.addEventListener('click', ()=> {menuAlunos.classList.toggle("active");});
-
 const menuTurmas = document.querySelector('.turmas');
-menuTurmas.addEventListener('click', ()=> {menuTurmas.classList.toggle("active");});
-
 const menuPlanos = document.querySelector('.planos');
-menuPlanos.addEventListener('click', ()=> {menuPlanos.classList.toggle("active");});
-
 const menuFinanceiro = document.querySelector('.financeiro');
-menuFinanceiro.addEventListener('click', ()=> {menuFinanceiro.classList.toggle("active");});
-
 const menuUsuarios = document.querySelector('.usuarios');
+
+menuAlunos.addEventListener('click', ()=> {menuAlunos.classList.toggle("active");});
+menuTurmas.addEventListener('click', ()=> {menuTurmas.classList.toggle("active");});
+menuPlanos.addEventListener('click', ()=> {menuPlanos.classList.toggle("active");});
+menuFinanceiro.addEventListener('click', ()=> {menuFinanceiro.classList.toggle("active");});
 menuUsuarios.addEventListener('click', ()=> {menuUsuarios.classList.toggle("active");});
 
 /* Alert Itens */
