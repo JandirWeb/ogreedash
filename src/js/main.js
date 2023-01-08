@@ -8,11 +8,41 @@ const menuPlanos = document.querySelector('.planos');
 const menuFinanceiro = document.querySelector('.financeiro');
 const menuUsuarios = document.querySelector('.usuarios');
 
-menuAlunos.addEventListener('click', ()=> {menuAlunos.classList.toggle("active");});
-menuTurmas.addEventListener('click', ()=> {menuTurmas.classList.toggle("active");});
-menuPlanos.addEventListener('click', ()=> {menuPlanos.classList.toggle("active");});
-menuFinanceiro.addEventListener('click', ()=> {menuFinanceiro.classList.toggle("active");});
-menuUsuarios.addEventListener('click', ()=> {menuUsuarios.classList.toggle("active");});
+menuAlunos.addEventListener('click', ()=> {
+    menuAlunos.classList.toggle("active");
+    menuTurmas.classList.remove('active');
+    menuPlanos.classList.remove('active');
+    menuFinanceiro.classList.remove('active');
+    menuUsuarios.classList.remove('active');
+});
+menuTurmas.addEventListener('click', ()=> {
+    menuTurmas.classList.toggle("active");
+    menuAlunos.classList.remove('active');
+    menuPlanos.classList.remove('active');
+    menuFinanceiro.classList.remove('active');
+    menuUsuarios.classList.remove('active');
+});
+menuPlanos.addEventListener('click', ()=> {
+    menuPlanos.classList.toggle("active");
+    menuAlunos.classList.remove('active');
+    menuTurmas.classList.remove('active');
+    menuFinanceiro.classList.remove('active');
+    menuUsuarios.classList.remove('active');
+});
+menuFinanceiro.addEventListener('click', ()=> {
+    menuFinanceiro.classList.toggle("active");
+    menuAlunos.classList.remove('active');
+    menuTurmas.classList.remove('active');
+    menuPlanos.classList.remove('active');
+    menuUsuarios.classList.remove('active');
+});
+menuUsuarios.addEventListener('click', ()=> {
+    menuUsuarios.classList.toggle("active");
+    menuAlunos.classList.remove('active');
+    menuTurmas.classList.remove('active');
+    menuPlanos.classList.remove('active');
+    menuFinanceiro.classList.remove('active');
+});
 
 /* Alert Itens */
 const alertIcon = document.querySelector('.alerts');
