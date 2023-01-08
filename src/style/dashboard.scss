@@ -4,7 +4,7 @@ main{
     color: $white-ogree;
 
     .content{
-        min-height: 100vh;
+        min-height: calc(100vh - 55px);
         margin-left: 240px;
         padding: 20px 30px;
     }
