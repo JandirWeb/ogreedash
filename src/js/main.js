@@ -1,7 +1,6 @@
 import '../style/styles.scss'
 
 /* Main Menu */
-
 const menuAlunos = document.querySelector('.alunos');
 const menuTurmas = document.querySelector('.turmas');
 const menuPlanos = document.querySelector('.planos');
@@ -77,3 +76,18 @@ document.addEventListener('mousedown', (event) => {
         }, "500")
     }
 });
+
+/*Number Animation*/
+let number = document.querySelector('.number');
+let numberFix = number.getAttribute('data-qtd-number');
+let count = setInterval(animaNumber, 30);
+
+function animaNumber(){
+    if(number.innerHTML == numberFix){
+        clearInterval(count);
+    } else{
+        let contador = parseInt(number.innerText);
+        number.innerHTML = contador + 1;
+    }
+}
+
